@@ -1,4 +1,4 @@
-package com.radu.newsreader.ui.fragments;
+package com.radu.newsreader.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

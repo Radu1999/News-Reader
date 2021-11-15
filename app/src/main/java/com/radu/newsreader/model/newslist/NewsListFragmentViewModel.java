@@ -22,6 +22,6 @@ public class NewsListFragmentViewModel extends ViewModel implements LifecycleObs
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void refresh() {
-        newsList.add(new ArticleItemViewModel("oare", "merge?"));
+        newsList.add(new ArticleItemViewModel("Shock!", "Se scumpesc merdenelele"));
     }
 }

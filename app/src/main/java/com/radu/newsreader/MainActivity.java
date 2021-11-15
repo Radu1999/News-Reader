@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.radu.newsreader.ui.fragments.NewsListFragment;
+import com.radu.newsreader.fragments.NewsListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
