@@ -1,7 +1,7 @@
 package com.radu.data.features.news.remote;
 
-import com.radu.data.features.news.remote.mapper.NewsDtoToNewsMapper;
 import com.radu.data.features.news.models.Article;
+import com.radu.data.features.news.remote.mapper.NewsDtoToNewsMapper;
 import com.radu.data.remote.NewsApi;
 
 import java.util.List;
