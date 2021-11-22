@@ -1,5 +1,7 @@
 package com.radu.newsreader.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +13,14 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.radu.newsreader.databinding.NewsListFragmentBinding;
+import com.radu.newsreader.model.ViewModelFactory;
 import com.radu.newsreader.model.newslist.NewsListFragmentViewModel;
+import com.radu.newsreader.navigator.AlertNavigator;
 
 public class NewsListFragment extends Fragment {
 
     private NewsListFragmentViewModel mViewModel;
+    private AlertNavigator alertNavigator;
 
     public static NewsListFragment newInstance() {
         return new NewsListFragment();
@@ -24,7 +29,11 @@ public class NewsListFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(NewsListFragmentViewModel.class);
+        alertNavigator = new AlertNavigator(getChildFragmentManager(), requireContext());
+
+        mViewModel = new ViewModelProvider(this, new ViewModelFactory(requireActivity().getApplication())).get(NewsListFragmentViewModel.class);
+        mViewModel.error.observe(this, throwable -> alertNavigator.showErrorFor(throwable));
+        mViewModel.openLink.observe(this, this::openLink);
         getLifecycle().addObserver(mViewModel);
     }
 
@@ -37,12 +46,9 @@ public class NewsListFragment extends Fragment {
         return binding.getRoot();
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        // TODO: Use the ViewModel
-
+    private void openLink(@NonNull String link) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(link));
+        startActivity(i);
     }
-
 }

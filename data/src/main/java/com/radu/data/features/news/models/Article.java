@@ -1,4 +1,4 @@
-package com.radu.data.models;
+package com.radu.data.features.news.models;
 
 import androidx.annotation.NonNull;
 

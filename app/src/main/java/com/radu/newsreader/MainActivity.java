@@ -1,8 +1,8 @@
 package com.radu.newsreader;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.radu.newsreader.fragments.NewsListFragment;
 
@@ -18,4 +18,5 @@ public class MainActivity extends AppCompatActivity {
                     .commitNow();
         }
     }
+
 }

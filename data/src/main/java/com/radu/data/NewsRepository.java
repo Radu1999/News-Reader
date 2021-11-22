@@ -2,7 +2,7 @@ package com.radu.data;
 
 import androidx.annotation.NonNull;
 
-import com.radu.data.models.Article;
+import com.radu.data.features.news.models.Article;
 
 import java.util.List;
 
