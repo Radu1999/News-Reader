@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import io.reactivex.Single;
+import io.reactivex.schedulers.Schedulers;
 
 public class ArticleLocalDataStore {
     private final ArticleDao dao;
@@ -28,7 +29,9 @@ public class ArticleLocalDataStore {
             entities.add(new ArticleEntity(article.imageUrl, article.title,
                     article.content, article.description));
         }
-        dao.insertArticles(entities);
+        dao.insertArticles(entities)
+                .subscribeOn(Schedulers.io())
+                .subscribe();
     }
 
 }

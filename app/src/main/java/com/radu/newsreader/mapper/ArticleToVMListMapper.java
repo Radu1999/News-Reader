@@ -15,7 +15,7 @@ public class ArticleToVMListMapper implements Function<List<Article>, List<Artic
     public List<ArticleItemViewModel> apply(@NonNull List<Article> articles) throws Exception {
         List<ArticleItemViewModel> avm = new ArrayList<>();
         for(Article art : articles) {
-            avm.add(new ArticleItemViewModel(art.title, art.description));
+            avm.add(new ArticleItemViewModel(art.title, art.description, art.imageUrl, art.content));
         }
         return avm;
     }

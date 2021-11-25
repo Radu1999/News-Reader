@@ -17,6 +17,7 @@
 
     <ImageView
         android:id="@+id/itemShow_vPicture"
+        app:imageUrl="@{viewModel.imageUrl}"
         android:layout_width="67dp"
         android:layout_height="100dp"
         android:layout_marginEnd="16dp" />
@@ -31,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="@={viewModel.title}"
+            android:text="@{viewModel.title}"
             tools:text="Title" />
 
 
@@ -42,7 +43,7 @@
             android:textSize="14sp"
             android:textColor="#999999"
             android:ellipsize="end"
-            android:text="@={viewModel.text}"
+            android:text="@{viewModel.text}"
             tools:text="Some news text right here"
 
 
