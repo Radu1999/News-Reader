@@ -1,14 +1,11 @@
 package com.radu.newsreader.model.article;
 
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.ViewModel;
+public class ArticleItemViewModel {
 
-public class ArticleItemViewModel extends ViewModel implements LifecycleObserver {
-    // TODO: Implement the ViewModel
-    public  String imageUrl;
-    public  String title;
-    public  String text;
-    public  String content;
+    public final String imageUrl;
+    public final String title;
+    public final String text;
+    public final String content;
 
     public ArticleItemViewModel(String title, String text, String imageUrl, String content) {
         this.title = title;

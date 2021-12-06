@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.radu.newsreader.model.newslist.NewsListFragmentViewModel" />
+            type="com.radu.newsreader.model.newslist.NewsListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

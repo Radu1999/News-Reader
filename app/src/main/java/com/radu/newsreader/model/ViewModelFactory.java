@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.radu.data.NewsRepository;
 import com.radu.newsreader.DataProvider;
-import com.radu.newsreader.model.newslist.NewsListFragmentViewModel;
+import com.radu.newsreader.model.newslist.NewsListViewModel;
 
 public class ViewModelFactory implements ViewModelProvider.Factory {
 
@@ -20,9 +20,9 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
     @Override
     public <T extends ViewModel> T create(Class<T> modelClass) {
 
-        if (modelClass.isAssignableFrom(NewsListFragmentViewModel.class)) {
+        if (modelClass.isAssignableFrom(NewsListViewModel.class)) {
             NewsRepository repo = DataProvider.getRepoProvider().provideNewsRepository();
-            return (T) new NewsListFragmentViewModel(application, repo);
+            return (T) new NewsListViewModel(application, repo);
         }
 
         throw new IllegalArgumentException("Unknown ViewModel class");

@@ -23,7 +23,7 @@ import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 
-public class NewsListFragmentViewModel extends AndroidViewModel implements LifecycleObserver {
+public class NewsListViewModel extends AndroidViewModel implements LifecycleObserver {
     @NonNull
     private final ObservableList<ArticleItemViewModel> newsList = new ObservableArrayList();
     private final NewsRepository repo;
@@ -34,7 +34,7 @@ public class NewsListFragmentViewModel extends AndroidViewModel implements Lifec
 
     private final static String LINK = "https://newsapi.org/";
 
-    public NewsListFragmentViewModel(Application app, NewsRepository repo) {
+    public NewsListViewModel(Application app, NewsRepository repo) {
         super(app);
         this.repo = repo;
         this.isLoading = new ObservableBoolean();

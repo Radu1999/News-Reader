@@ -14,12 +14,12 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.radu.newsreader.databinding.NewsListFragmentBinding;
 import com.radu.newsreader.model.ViewModelFactory;
-import com.radu.newsreader.model.newslist.NewsListFragmentViewModel;
+import com.radu.newsreader.model.newslist.NewsListViewModel;
 import com.radu.newsreader.navigator.AlertNavigator;
 
 public class NewsListFragment extends Fragment {
 
-    private NewsListFragmentViewModel mViewModel;
+    private NewsListViewModel mViewModel;
     private AlertNavigator alertNavigator;
 
     public static NewsListFragment newInstance() {
@@ -31,7 +31,7 @@ public class NewsListFragment extends Fragment {
         super.onCreate(savedInstanceState);
         alertNavigator = new AlertNavigator(getChildFragmentManager(), requireContext());
 
-        mViewModel = new ViewModelProvider(this, new ViewModelFactory(requireActivity().getApplication())).get(NewsListFragmentViewModel.class);
+        mViewModel = new ViewModelProvider(this, new ViewModelFactory(requireActivity().getApplication())).get(NewsListViewModel.class);
         mViewModel.error.observe(this, throwable -> alertNavigator.showErrorFor(throwable));
         mViewModel.openLink.observe(this, this::openLink);
         getLifecycle().addObserver(mViewModel);
