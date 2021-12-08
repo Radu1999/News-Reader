@@ -1,4 +1,4 @@
-package com.radu.newsreader.model.article;
+package com.radu.newsreader.features.article.model;
 
 public class ArticleItemViewModel {
 

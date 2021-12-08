@@ -1,11 +1,11 @@
-package com.radu.newsreader.bindings;
+package com.radu.newsreader.features.newslist.bindings;
 
 import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.radu.newsreader.adapters.newslist.NewsListAdapter;
-import com.radu.newsreader.model.article.ArticleItemViewModel;
+import com.radu.newsreader.features.newslist.adapter.NewsListAdapter;
+import com.radu.newsreader.features.article.model.ArticleItemViewModel;
 
 import java.util.List;
 

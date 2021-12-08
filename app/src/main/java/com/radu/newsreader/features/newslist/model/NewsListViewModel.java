@@ -1,4 +1,4 @@
-package com.radu.newsreader.model.newslist;
+package com.radu.newsreader.features.newslist.model;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
@@ -15,8 +15,8 @@ import androidx.lifecycle.OnLifecycleEvent;
 
 import com.radu.data.NewsRepository;
 import com.radu.newsreader.R;
-import com.radu.newsreader.mapper.ArticleToVMListMapper;
-import com.radu.newsreader.model.article.ArticleItemViewModel;
+import com.radu.newsreader.features.article.mapper.ArticleToVMListMapper;
+import com.radu.newsreader.features.article.model.ArticleItemViewModel;
 import com.radu.newsreader.reactive.SingleLiveEvent;
 
 import java.util.List;

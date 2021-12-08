@@ -1,9 +1,9 @@
-package com.radu.newsreader.mapper;
+package com.radu.newsreader.features.article.mapper;
 
 import androidx.annotation.NonNull;
 
 import com.radu.data.features.news.models.Article;
-import com.radu.newsreader.model.article.ArticleItemViewModel;
+import com.radu.newsreader.features.article.model.ArticleItemViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

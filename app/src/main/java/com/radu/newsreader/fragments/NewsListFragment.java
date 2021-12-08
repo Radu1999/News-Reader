@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.radu.newsreader.databinding.NewsListFragmentBinding;
 import com.radu.newsreader.model.ViewModelFactory;
-import com.radu.newsreader.model.newslist.NewsListViewModel;
+import com.radu.newsreader.features.newslist.model.NewsListViewModel;
 import com.radu.newsreader.navigator.AlertNavigator;
 
 public class NewsListFragment extends Fragment {
