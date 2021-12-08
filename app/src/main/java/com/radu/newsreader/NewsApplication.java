@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.radu.data.di.RepoModule;
 
-public class DataProvider extends Application {
+public class NewsApplication extends Application {
     private static RepoModule repoModule;
 
     @Override

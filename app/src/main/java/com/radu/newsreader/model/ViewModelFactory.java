@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.radu.data.NewsRepository;
-import com.radu.newsreader.DataProvider;
+import com.radu.newsreader.NewsApplication;
 import com.radu.newsreader.model.newslist.NewsListViewModel;
 
 public class ViewModelFactory implements ViewModelProvider.Factory {
@@ -21,7 +21,7 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
     public <T extends ViewModel> T create(Class<T> modelClass) {
 
         if (modelClass.isAssignableFrom(NewsListViewModel.class)) {
-            NewsRepository repo = DataProvider.getRepoProvider().provideNewsRepository();
+            NewsRepository repo = NewsApplication.getRepoProvider().provideNewsRepository();
             return (T) new NewsListViewModel(application, repo);
         }
 
