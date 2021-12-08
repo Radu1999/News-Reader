@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.radu.data.NewsRepository;
 import com.radu.newsreader.NewsApplication;
-import com.radu.newsreader.model.newslist.NewsListViewModel;
+import com.radu.newsreader.features.newslist.model.NewsListViewModel;
 
 public class ViewModelFactory implements ViewModelProvider.Factory {
 
